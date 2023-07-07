@@ -18,10 +18,7 @@ function Electronic(props) {
   }, []);
 
   const handleClick = (e, data) => {
-    // const myArr = []
-    // e.preventDefault();
-    // myArr.push(data);
-    // localStorage.setItem('Product', JSON.stringify(myArr))
+   
     const myArr = JSON.parse(localStorage.getItem('Product')) || [];
     myArr.push(data);
     localStorage.setItem('Product', JSON.stringify(myArr));

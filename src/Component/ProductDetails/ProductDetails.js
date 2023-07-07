@@ -24,14 +24,6 @@ function Productdetails(props) {
             <img src={product.image} width={300} height={300} />
             <br />
             <br />
-            <button
-                onClick={() => {
-                    navigate("/Product");
-                }}
-            >
-                Go back to Products
-            </button>
-
         </div>
     );
 }
