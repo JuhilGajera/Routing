@@ -29,17 +29,21 @@ export default function AddtoCart() {
     return (
         <div>
             <Row xs={1} md={3} className="g-4">
-                {data.map((item) => (
-                    <Card key={item.id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={item.image} />
-                        <Card.Body>
-                            <Card.Title>{item.title}</Card.Title>
-                        </Card.Body>
-                        <Card.Body>
-                            <Button variant="danger" style={{ width: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => removeFromCart(item.id)}>Remove</Button>
-                        </Card.Body>
-                    </Card>
-                ))}
+                {data ?
+
+                    data.map((item) => (
+                        <Card key={item.id} style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={item.image} />
+                            <Card.Body>
+                                <Card.Title>{item.title}</Card.Title>
+                            </Card.Body>
+                            <Card.Body>
+                                <Button variant="danger" style={{ width: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => removeFromCart(item.id)}>Remove</Button>
+                            </Card.Body>
+                        </Card>
+                    ))
+
+                    : null}
             </Row>
         </div>
     )
